@@ -1,0 +1,9 @@
+Notas Aplicando o background
+
+tag background-image, aplicar uma imagem no fundo, usando url();
+
+tag background-repeat, evitar a repetição da imagem usando o no repeat
+
+tag background-position, começa por eixo y(horizontal) e x(vertical) sendo top center
+
+tag background-size, cover, irá cobrir todo espaço em branco com o fundo aplicado

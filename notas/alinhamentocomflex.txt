@@ -1,0 +1,19 @@
+Alinhamento de elementos com flex
+
+ul{
+    list-style: none;
+   
+}
+
+ul li a{
+    border: 1px solid red;
+
+    display: flex; /*Fará com que o a pegue todo o espaço disponível, pois a é um elemento block*/
+    justify-content: center;
+}
+
+
+Sobre o trecho de código acima, fazemos com que o display flex ajuste o elemento a
+pegando toda a largura,já que é um elemento block
+E com a tag justify... deixamos o elemento no centro
+Não seria possível utilizar o text-algin, pois precisariamos definir o display como block, para reconhecer como texto

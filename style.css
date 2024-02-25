@@ -1,0 +1,191 @@
+* {
+    /*Seletor universal, zerando todas as estilizações do navegador*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Tamanho da caixa, para que sejaa medida através da borda*/
+    /*Assim, respeita a largura definida caso, delimitado algum preenchimento interno.*/
+}
+
+/*Definindo variavies ao css, root é um sudo selector*/
+:root {
+    --text-color: white; /*Definindo uma variavel*/
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255,255,255,0.5); /*rgb e a ultima é a transparência*/
+    --surface-color: rgba(255,255,255,0.1);
+    --surface-color-hover: rgba(255,255,255,0.05);
+    --highlight-color: rgba(255,255,255,0.2);
+    --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light{
+    --text-color:black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0,0,0,0.5);
+    --surface-color: rgba(0,0,0,0.05);
+    --surface-color-hover: rgba(0,0,0,0.02);
+    --highlight-color: rgba(0,0,0,0.1);
+    --switch-bg-url: url(./assets/sun.svg);
+
+
+
+}
+
+
+body {
+    /*
+    background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat; 
+    background-position: top center;
+    background-size: cover;
+    */
+
+    /*background color image repeat position/size*/
+    /*Realizando agrupamento de estilo*/
+    background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+    /* Asterisco é um seletor universal, quer dizer que será aplicado em todo o body*/
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+
+}
+
+#container {
+    /*Seletor do id é # */
+    
+    width: 360px;
+    /*border: 1px solid red; */
+
+    /*"Espaço" que está aos lados da caixa delimitada, definindo valores, ela irá empurrar a "caixa"*/
+    margin: 56px auto 0px;
+    /*Display block dará toda largura disponivel em tela*/
+    /*Display inline fica em linha, um lado do outro*/
+    padding: 0 24px;
+}
+
+
+
+/*profile*/
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+
+#profile img{
+    /*Não precisa definir altura, geralmente ela segue o conteúdo da pagina*/
+    width: 112px;
+}
+
+#profile p{
+    /*Por padrão, os navegadores já possuem o tamanho das fontes a 16px*/
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px; /*Altura da linha*/
+    margin-top: 8px;
+}
+
+/*switch*/
+
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute; /*Realiza uma sobreposição de camadas*/
+    top: 50%; /*Todo o elemento, 50% no topo*/
+    left: 0;
+    z-index: 1; /*Ficou acima do elemento, subiu um andar*/
+    transform: translateY(-50%); /*Jogando 50% do elemento para cima*/
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 999px;
+
+}
+
+
+/*links*/
+ul{
+    list-style: none;
+    display: flex; 
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px 16px;
+
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;/*arredondar*/
+    backdrop-filter: blur(4px);/*embaçar*/
+    -webkit-backdrop-filter: blur(4px);/*embaçar*/
+
+    text-decoration: none; /*remover o sublinhado do link*/
+    font-weight: 500;/*Acima de 400 é bold*/
+   
+    transition: all 0.5s /*Quando haver mudanças, ele irá transacionar todas os elementos, leve carregada*/
+}
+
+/* pseudo-selector */
+ul li a:hover {
+    /*estilização de elementos ao passar o mouse, sudo selector*/
+    background-color: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+/* social links*/
+#social-links {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 24px; /*Alterando o tamanho de todos os componentes dentro de social links*/
+   
+}
+
+#social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+#social-links a:hover{
+    background-color: var(--highlight-color);
+    padding: 16px;
+    
+}
+
+footer{
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}

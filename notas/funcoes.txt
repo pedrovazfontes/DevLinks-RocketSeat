@@ -1,0 +1,17 @@
+Funções em js
+
+Serve para:
+Agrupamento de código
+Reuso de código
+Mini programas dentro do programa maior
+Toda Linguagem oferece muitas opções
+
+....................
+
+exemplo:
+
+function sayhello() {
+	alert("salve")
+}
+
+sayhello()

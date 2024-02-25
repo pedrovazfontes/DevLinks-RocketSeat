@@ -1,0 +1,13 @@
+Display flex
+
+ul{
+    list-style: none;
+    display: flex; /*Ele deixa os elementos da caixa flexível, no caso os LIs, deixandos um lado do outro*/
+    /*E caso adicionando ou removendo eles se autoajustam um lado do outro, padrão vir em inline*/
+    gap: 8px; /*Espaçamento entre os elementos, não colocara no top*/
+}
+
+ul li {
+
+    border: 1px solid red;
+}
