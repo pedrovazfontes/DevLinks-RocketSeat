@@ -54,7 +54,8 @@ body * {
 #container {
     /*Seletor do id é # */
     
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     /*border: 1px solid red; */
 
     /*"Espaço" que está aos lados da caixa delimitada, definindo valores, ela irá empurrar a "caixa"*/
